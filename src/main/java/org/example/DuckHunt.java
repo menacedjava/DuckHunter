@@ -41,44 +41,44 @@ public class DuckHunt extends JPanel implements ActionListener, MouseListener {
         duckShot = false;
     }
 
-//    @Override
-//    protected void paintComponent(Graphics g) {
-//        super.paintComponent(g);
-//
-//        // Skorni chizish
-//        g.setColor(Color.BLACK);
-//        g.setFont(new Font("Arial", Font.BOLD, 20));
-//        g.drawString("Score: " + score, 20, 30);
-//
-//        // Ördakni chizish
-//        if (!duckShot) {
-//            g.setColor(Color.RED);
-//            g.fillOval(duckX, duckY, DUCK_SIZE, DUCK_SIZE);
-//        } else {
-//            g.setColor(Color.BLACK);
-//            g.drawString("Hit!", duckX + 10, duckY + 25);
-//        }
-//    }
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
 
-//    @Override
-//    public void actionPerformed(ActionEvent e) {
-//        if (!duckShot) {
-//            duckX += duckVelocityX;
-//            duckY += duckVelocityY;
-//
-//            // Chegaralarni tekshirish va yo'nalishni o'zgartirish
-//            if (duckX < 0 || duckX > WIDTH - DUCK_SIZE) {
-//                duckVelocityX *= -1;
-//            }
-//            if (duckY < 0 || duckY > HEIGHT / 2) {
-//                duckVelocityY *= -1;
-//            }
-//        } else {
-//            spawnDuck();
-//        }
-//
-//        repaint();
-//    }
+
+        g.setColor(Color.BLACK);
+        g.setFont(new Font("Arial", Font.BOLD, 20));
+        g.drawString("Score: " + score, 20, 30);
+
+
+        if (!duckShot) {
+            g.setColor(Color.RED);
+            g.fillOval(duckX, duckY, DUCK_SIZE, DUCK_SIZE);
+        } else {
+            g.setColor(Color.BLACK);
+            g.drawString("Hit!", duckX + 10, duckY + 25);
+        }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (!duckShot) {
+            duckX += duckVelocityX;
+            duckY += duckVelocityY;
+
+            // Chegaralarni tekshirish va yo'nalishni o'zgartirish
+            if (duckX < 0 || duckX > WIDTH - DUCK_SIZE) {
+                duckVelocityX *= -1;
+            }
+            if (duckY < 0 || duckY > HEIGHT / 2) {
+                duckVelocityY *= -1;
+            }
+        } else {
+            spawnDuck();
+        }
+
+        repaint();
+    }
 
 //    @Override
 //    public void mousePressed(MouseEvent e) {
