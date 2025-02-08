@@ -80,40 +80,40 @@ public class DuckHunt extends JPanel implements ActionListener, MouseListener {
         repaint();
     }
 
-//    @Override
-//    public void mousePressed(MouseEvent e) {
-//        int mouseX = e.getX();
-//        int mouseY = e.getY();
-//
-//        if (!duckShot && mouseX >= duckX && mouseX <= duckX + DUCK_SIZE && mouseY >= duckY && mouseY <= duckY + DUCK_SIZE) {
-//            duckShot = true;
-//            score++;
-//        }
-//    }
+    @Override
+    public void mousePressed(MouseEvent e) {
+        int mouseX = e.getX();
+        int mouseY = e.getY();
 
-//    @Override
-//    public void mouseReleased(MouseEvent e) {
-//    }
-//
-//    @Override
-//    public void mouseEntered(MouseEvent e) {
-//    }
-//
-//    @Override
-//    public void mouseExited(MouseEvent e) {
-//    }
-//
-//    @Override
-//    public void mouseClicked(MouseEvent e) {
-//    }
+        if (!duckShot && mouseX >= duckX && mouseX <= duckX + DUCK_SIZE && mouseY >= duckY && mouseY <= duckY + DUCK_SIZE) {
+            duckShot = true;
+            score++;
+        }
+    }
 
-//    public static void main(String[] args) {
-//        JFrame frame = new JFrame("Duck Hunt");
-//        DuckHunt game = new DuckHunt();
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.add(game);
-//        frame.pack();
-//        frame.setLocationRelativeTo(null);
-//        frame.setVisible(true);
-//    }
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Duck Hunt");
+        DuckHunt game = new DuckHunt();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(game);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
 }
