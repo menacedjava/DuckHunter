@@ -12,15 +12,15 @@ import java.util.Random;
 
 public class DuckHunt extends JPanel implements ActionListener, MouseListener {
 
-//    private static final int WIDTH = 800;
-//    private static final int HEIGHT = 600;
-//    private static final int DUCK_SIZE = 50;
-//    private int duckX, duckY;
-//    private int duckVelocityX, duckVelocityY;
-//    private int score = 0;
-//    private boolean duckShot = false;
-//    private Timer timer;
-//    private Random random = new Random();
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 600;
+    private static final int DUCK_SIZE = 50;
+    private int duckX, duckY;
+    private int duckVelocityX, duckVelocityY;
+    private int score = 0;
+    private boolean duckShot = false;
+    private Timer timer;
+    private Random random = new Random();
 
 //    public DuckHunt() {
 //        this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
