@@ -22,24 +22,24 @@ public class DuckHunt extends JPanel implements ActionListener, MouseListener {
     private Timer timer;
     private Random random = new Random();
 
-//    public DuckHunt() {
-//        this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
-//        this.setBackground(Color.CYAN);
-//        this.addMouseListener(this);
-//
-//        spawnDuck();
-//
-//        timer = new Timer(20, this);
-//        timer.start();
-//    }
+    public DuckHunt() {
+        this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        this.setBackground(Color.CYAN);
+        this.addMouseListener(this);
 
-//    private void spawnDuck() {
-//        duckX = random.nextInt(WIDTH - DUCK_SIZE);
-//        duckY = random.nextInt(HEIGHT / 2);
-//        duckVelocityX = random.nextInt(4) + 2;
-//        duckVelocityY = random.nextInt(3) - 1;
-//        duckShot = false;
-//    }
+        spawnDuck();
+
+        timer = new Timer(20, this);
+        timer.start();
+    }
+
+    private void spawnDuck() {
+        duckX = random.nextInt(WIDTH - DUCK_SIZE);
+        duckY = random.nextInt(HEIGHT / 2);
+        duckVelocityX = random.nextInt(4) + 2;
+        duckVelocityY = random.nextInt(3) - 1;
+        duckShot = false;
+    }
 
 //    @Override
 //    protected void paintComponent(Graphics g) {
